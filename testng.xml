@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+
+    <test name="1 Check User could register with valid data">
+        <classes>
+            <class name="Testcases.TC01_Registration">
+                <methods>
+                    <include name="registerNewUserWithValidData_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="2 Check Register then login with valid registered data">
+        <classes>
+            <class name="Testcases.TC01_Registration">
+                <methods>
+                    <include name="registerNewUserWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="Check_LoginTabClickable"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC02_Login">
+                <methods>
+                    <include name="loginWithValidData_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="3 User could reset his/her password successfully">
+        <classes>
+            <class name="Testcases.TC01_Registration">
+                <methods>
+                    <include name="registerNewUserWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="Click_LoginTabClickable"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="Check_LoginTabClickable"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC02_Login">
+                <methods>
+                    <include name="Check_ForgetPassword_Clickable"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC03_ForgetPassword">
+                <methods>
+                    <include name="ResetPassWord_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="4 Check Logged User could search for any product">
+        <classes>
+            <class name="Testcases.TC01_Registration">
+                <methods>
+                    <include name="registerNewUserWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC02_Login">
+                <methods>
+                    <include name="loginWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC08_SearchForItem">
+                <methods>
+                    <include name="SearchForItem_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="5 Check Logged User could switch between currencies US-Euro">
+        <classes>
+            <class name="Testcases.TC01_Registration">
+                <methods>
+                    <include name="registerNewUserWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC02_Login">
+                <methods>
+                    <include name="loginWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="SwitchCurrencyToEuro_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="6 Check Open-showsPAge_P Logged user could select  Categories">
+        <classes>
+            <class name="Testcases.TC01_Registration">
+                <methods>
+                    <include name="registerNewUserWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC02_Login">
+                <methods>
+                    <include name="loginWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="OpenshoesPAge_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="7 Check selecting Red Radio button of shoes_P(Logged user could filter with color)">
+        <classes>
+            <class name="Testcases.TC04_Shoes">
+                <methods>
+                    <include name="Select_RedDatioButton_shoes_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="8 Check Select Different Random Computer Items">
+        <classes>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="SelectRandom_FromCOmputerCategory_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="9 Check Select Different Random Electronic Items">
+        <classes>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="SelectRandomDifferentElectronic_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="10 Check Select Different Random Apparel Items">
+        <classes>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="SelectRandomDifferentApparel_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="11 Check Select Random FirstThreeCategories Items">
+        <classes>
+            <class name="Testcases.TC00_Home">
+                <methods>
+                    <include name="SelectRandomFirstThreeCategories_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="12 Check Select Random FirstThreeCategories Items">
+        <classes>
+            <class name="Testcases.TC06_BuildAllProducts">
+                <methods>
+                    <include name="AddTheOwnComputerToCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="13 Check Select Build all Products">
+        <classes>
+            <class name="Testcases.TC01_Registration">
+                <methods>
+                    <include name="registerNewUserWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC02_Login">
+                <methods>
+                    <include name="loginWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC06_BuildAllProducts">
+                <methods>
+                    <include name="AddTheOwnComputerToCart"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC06_BuildAllProducts">
+                <methods>
+                    <include name="AddDigitalStorm_ToWatchListProduct2_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC06_BuildAllProducts">
+                <methods>
+                    <include name="AddLenovo_ToCompareListProduct3_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="14 Create successful Order">
+        <classes>
+            <class name="Testcases.TC01_Registration">
+                <methods>
+                    <include name="registerNewUserWithValidData_P"/> <!-- Replace with the actual method names -->
+                </methods>
+            </class>
+            <class name="Testcases.TC02_Login">
+                <methods>
+                    <include name="loginWithValidData_P"/>
+                </methods>
+            </class>
+            <class name="Testcases.TC07_ShoppingCart">
+                <methods>
+                    <include name="CreateSuccessfullOrder_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
