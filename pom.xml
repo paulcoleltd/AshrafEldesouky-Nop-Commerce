@@ -40,7 +40,7 @@
         <version>3.3.1</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
+            <suiteXmlFile>C:\Users\Fawad\Desktop\NopCommerceTestNGDevOps\AshrafEldesouky-Nop-Commerce-master</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
